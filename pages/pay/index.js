@@ -317,6 +317,7 @@ Page({
         url: "/pages/all-orders/index"
       })
     } else {
+      console.log(res.data.id);
       wxpay.wxpay('order', money, res.data.id, "/pages/all-orders/index");
     }
   },

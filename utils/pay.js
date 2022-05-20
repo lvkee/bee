@@ -66,7 +66,12 @@ function wxpay(type, money, orderId, redirectUrl, data) {
         title: '出错了',
         content: JSON.stringify(res),
         showCancel: false
-      })      
+      })  
+      if (redirectUrl) {
+        wx.redirectTo({
+          url: redirectUrl,
+        })
+      }
     }
   })
 }
